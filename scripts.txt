@@ -1,0 +1,16 @@
+-- Productos
+
+cd C:\Users\Ivan.FRIAS-GIL\Documents\projects_java_microservices\docker\docker-spring-boot-project\springboot-servicio-productos
+mvn clean package
+docker build -t servicio-productos:1.0 .
+docker run -d -p 8001:8080 --name servicio-productos-container servicio-productos:1.0
+
+-- Item
+
+cd C:\Users\Ivan.FRIAS-GIL\Documents\projects_java_microservices\docker\docker-spring-boot-project\Springboot-Servicio-Item
+mvn clean package
+docker build -t servicio-items:1.0 .
+docker run -d -p 8002:8080 --name servicio-items-container servicio-items:1.0
+
+
+
